@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/MyProfile/static/css/main.730fdaf4.css",
-    "main.js": "/MyProfile/static/js/main.8f577229.js",
+    "main.js": "/MyProfile/static/js/main.8fc3d338.js",
+    "static/media/Doc_Oracle1.jpg": "/MyProfile/static/media/Doc_Oracle1.b704b64344031f33f478.jpg",
     "static/media/mainMe.png": "/MyProfile/static/media/mainMe.70bad0e9bb7b5aee336d.png",
     "static/media/mainError.png": "/MyProfile/static/media/mainError.c4c3705b9938c144cc50.png",
     "static/media/CV_OlgaHolovash_Front-end.pdf": "/MyProfile/static/media/CV_OlgaHolovash_Front-end.fd95178d76d29d5bbc6f.pdf",
-    "static/media/Doc_Oracle1.jpg": "/MyProfile/static/media/Doc_Oracle1.b704b64344031f33f478.jpg",
     "static/media/Doc_0099_2023.jpg": "/MyProfile/static/media/Doc_0099_2023.1c81304c484b57cc77a8.jpg",
     "static/media/me.jpg": "/MyProfile/static/media/me.1626e1827e78cbe251a1.jpg",
     "static/media/Doc_Oracle2.jpg": "/MyProfile/static/media/Doc_Oracle2.b2b7af8aa299d492f3af.jpg",
@@ -31,10 +31,10 @@
     "static/media/TicTacToe.jpg": "/MyProfile/static/media/TicTacToe.7d4cb3c3ec77787730df.jpg",
     "index.html": "/MyProfile/index.html",
     "main.730fdaf4.css.map": "/MyProfile/static/css/main.730fdaf4.css.map",
-    "main.8f577229.js.map": "/MyProfile/static/js/main.8f577229.js.map"
+    "main.8fc3d338.js.map": "/MyProfile/static/js/main.8fc3d338.js.map"
   },
   "entrypoints": [
     "static/css/main.730fdaf4.css",
-    "static/js/main.8f577229.js"
+    "static/js/main.8fc3d338.js"
   ]
 }
