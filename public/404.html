@@ -27,7 +27,9 @@
             margin: 0;
             background: radial-gradient(circle, #0077ea, #1f4f96, #1b2949, #000);
         }
-
+        * *, *::before, *::after {
+            animation-play-state: running !important;
+        }
         .stage {
             height: 300px;
             width: 500px;
@@ -46,7 +48,7 @@
             height: 100%;
             position: absolute;
             transform-style: preserve-3d;
-            animation: ಠ_ಠ 5s infinite alternate ease-in-out -7.5s;
+            animation: fadeIn 5s infinite alternate ease-in-out -7.5s;
             animation-fill-mode: forwards;
             transform: rotateY(40deg) rotateX(33deg) translateZ(0);
         }
@@ -168,7 +170,7 @@
             text-shadow: none;
         }
 
-        @keyframes ಠ_ಠ {
+        @keyframes fadeIn {
             100% {
                 transform: rotateY(-40deg) rotateX(-43deg);
             }
@@ -200,12 +202,6 @@
         <div class="layer"></div>
         <div class="layer"></div>
     </div>
-
-    <style>
-        * *, *::before, *::after {
-            animation-play-state: running !important;
-        }
-    </style>
     <script>window.setTimeout = null;</script>
 </div>
 </body>

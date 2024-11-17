@@ -8,7 +8,9 @@ import {BrowserRouter} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter basename={'/myProfile'} future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <BrowserRouter
+        basename={'/MyProfile'}
+        future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <App/>
     </BrowserRouter>
 );
