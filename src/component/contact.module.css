@@ -1,0 +1,62 @@
+.container {
+    margin: 10px auto;
+    border: 6px groove #ff8787;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 20px;
+    width: 70%;
+}
+.label{
+    font-size: 1.6em
+}
+
+.inpText, .elSelect, .elTextarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    /*font-family: 'Dancing Script', sans-serif;*/
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    color: #72210d ;
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.inpText:focus {
+    outline: none;  /* Убираем стандартную рамку фокуса */
+    border: 1px solid #817d7d;
+}
+
+.button
+{
+    /*margin-top: 5px;*/
+    width: 140px;
+    height: 40px;
+    color: white;
+    background-color: rgba(204, 3 , 35 ,  0.5);
+    /*cursor: url('cursor_st_4.png'), auto;  не работает на кнопке, встроено в движок для submit*/
+    box-shadow: rgba(60,69,67, 0.6) 5px 5px;
+    border-color: #af3a3a;
+    border-radius: 20px;
+    font-size: 24px;
+}
+.button:hover {
+    background-color: indianred;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.h3{
+    margin-right: 20px;
+}
+.success{
+    color: forestgreen;
+}
+.failure{
+    color: red;
+}
