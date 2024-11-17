@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/MyProfile/static/css/main.730fdaf4.css",
-    "main.js": "/MyProfile/static/js/main.80da6ed6.js",
+    "main.js": "/MyProfile/static/js/main.8f577229.js",
     "static/media/mainMe.png": "/MyProfile/static/media/mainMe.70bad0e9bb7b5aee336d.png",
     "static/media/mainError.png": "/MyProfile/static/media/mainError.c4c3705b9938c144cc50.png",
-    "static/media/main0.png": "/MyProfile/static/media/main0.3eca38ece80c04afcc9a.png",
     "static/media/CV_OlgaHolovash_Front-end.pdf": "/MyProfile/static/media/CV_OlgaHolovash_Front-end.fd95178d76d29d5bbc6f.pdf",
     "static/media/Doc_Oracle1.jpg": "/MyProfile/static/media/Doc_Oracle1.b704b64344031f33f478.jpg",
     "static/media/Doc_0099_2023.jpg": "/MyProfile/static/media/Doc_0099_2023.1c81304c484b57cc77a8.jpg",
@@ -19,6 +18,7 @@
     "static/media/Doc_0091_2018.jpg": "/MyProfile/static/media/Doc_0091_2018.566c9cf7eaf28ca19014.jpg",
     "static/media/Doc_0091_2019.jpg": "/MyProfile/static/media/Doc_0091_2019.4030f2fba370875f4f3c.jpg",
     "static/media/Doc_001_2018.jpg": "/MyProfile/static/media/Doc_001_2018.e04328bbf579b2f8b2c8.jpg",
+    "static/media/main.jpg": "/MyProfile/static/media/main.475a508302ded24f8d36.jpg",
     "static/media/Doc_009_2022.jpg": "/MyProfile/static/media/Doc_009_2022.9e09940f04942dccb4d7.jpg",
     "static/media/Doc_003_2020.jpg": "/MyProfile/static/media/Doc_003_2020.1f78433159b351d848e1.jpg",
     "static/media/Doc_005_2021.jpg": "/MyProfile/static/media/Doc_005_2021.3a99298035efd22c8376.jpg",
@@ -31,10 +31,10 @@
     "static/media/TicTacToe.jpg": "/MyProfile/static/media/TicTacToe.7d4cb3c3ec77787730df.jpg",
     "index.html": "/MyProfile/index.html",
     "main.730fdaf4.css.map": "/MyProfile/static/css/main.730fdaf4.css.map",
-    "main.80da6ed6.js.map": "/MyProfile/static/js/main.80da6ed6.js.map"
+    "main.8f577229.js.map": "/MyProfile/static/js/main.8f577229.js.map"
   },
   "entrypoints": [
     "static/css/main.730fdaf4.css",
-    "static/js/main.80da6ed6.js"
+    "static/js/main.8f577229.js"
   ]
 }
