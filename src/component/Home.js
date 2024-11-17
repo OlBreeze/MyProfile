@@ -12,7 +12,7 @@ const Home = () => {
 
                 <img className={`w-100 ${style.imgMain} ${showFirstImage ? style.visible : style.hidden}`}
                      style={{ height: '100%', objectFit: 'cover' }}
-                     src={require('../images/main0.png')}
+                     src={require('../images/main.jpg')}
                      alt="nature"
                 />
         </section>
