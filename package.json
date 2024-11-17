@@ -1,6 +1,6 @@
 {
   "name": "myprofile",
-  "homepage": "https://olbreeze.github.io/myProfile/",
+  "homepage": "https://olbreeze.github.io/MyProfile/",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -29,7 +29,6 @@
     "test": "react-scripts test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
