@@ -25,7 +25,7 @@
     align-items: center;
 }
 .firstBlockText{
-    background-color: #F3E2E2;
+    background-color: rgba(239, 208, 208, 0.6);
     padding: 10px;
     font-family: "Sedan", serif;
     font-size: 18px;
@@ -35,11 +35,12 @@
     margin-right: 16px;
 }
 .secondBlock{
-    background-color: #b06b51;
-    border-color: #F4DC99;
+    /*background-color: #b06b51;*/
+    background-color: rgba(239, 208, 208, 0.6);
+    border-color: #f6e9c6;
     border-style: solid;
     border-width: 15px;
-    color: white;
+    /*color: white;*/
     padding: 10px;
     font-family: 'Dancing Script', sans-serif;
     font-size: 30px; /* Размер шрифта */
@@ -55,7 +56,8 @@
 }
 /*--------------  blocks ------------------*/
 .blockFirst{
-    background-color: #98fb98;
+    /*background-color: #98fb98;*/
+    background-color: #98A6E0;
     padding: 5px;
     margin: 5px;
     font-family: "Srisakdi", system-ui;
@@ -75,8 +77,9 @@
     border-radius: 20px 0 20px 20px;
 }
 .blockLast{
-    background-color: #e748e2;
-    color: white;
+    /*background-color: #e748e2;*/
+    background-color: #98A6E0;
+    /*color: white;*/
     padding: 10px;
     margin: 10px;
     font-family: 'Roboto', sans-serif;
