@@ -2,7 +2,7 @@ import React from 'react';
 import { Worker, Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css' ;
-import pdfFile from '../pdf_files/CV_OlgaHolovash_Front-end.pdf';
+import pdfFile from '../pdf_files/CV_OlgaHolovash_Front.pdf';
 
 // Plugins
 import { defaultLayoutPlugin }  from '@react-pdf-viewer/default-layout';
