@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MyProfile/static/css/main.1aae7f40.css",
-    "main.js": "/MyProfile/static/js/main.a57834d0.js",
+    "main.js": "/MyProfile/static/js/main.189f990c.js",
     "static/media/Doc_Oracle1.jpg": "/MyProfile/static/media/Doc_Oracle1.b704b64344031f33f478.jpg",
     "static/media/mainMe.png": "/MyProfile/static/media/mainMe.70bad0e9bb7b5aee336d.png",
     "static/media/mainError.png": "/MyProfile/static/media/mainError.c4c3705b9938c144cc50.png",
@@ -16,12 +16,12 @@
     "static/media/Doc_006_2021.jpg": "/MyProfile/static/media/Doc_006_2021.50195d58178379cb843b.jpg",
     "static/media/Doc_0091_2018.jpg": "/MyProfile/static/media/Doc_0091_2018.566c9cf7eaf28ca19014.jpg",
     "static/media/Doc_0091_2019.jpg": "/MyProfile/static/media/Doc_0091_2019.4030f2fba370875f4f3c.jpg",
-    "static/media/CV_FullStack_Golovash.pdf": "/MyProfile/static/media/CV_FullStack_Golovash.4eabb45deabeae5efc02.pdf",
     "static/media/Doc_001_2018.jpg": "/MyProfile/static/media/Doc_001_2018.e04328bbf579b2f8b2c8.jpg",
     "static/media/main.jpg": "/MyProfile/static/media/main.475a508302ded24f8d36.jpg",
     "static/media/Doc_009_2022.jpg": "/MyProfile/static/media/Doc_009_2022.9e09940f04942dccb4d7.jpg",
     "static/media/Doc_003_2020.jpg": "/MyProfile/static/media/Doc_003_2020.1f78433159b351d848e1.jpg",
     "static/media/Doc_005_2021.jpg": "/MyProfile/static/media/Doc_005_2021.3a99298035efd22c8376.jpg",
+    "static/media/CV_OlgaHolovash_Front.pdf": "/MyProfile/static/media/CV_OlgaHolovash_Front.4ab027f8f347894653eb.pdf",
     "static/media/Doc_004_2021.jpg": "/MyProfile/static/media/Doc_004_2021.04b2fbad98572bc18079.jpg",
     "static/media/Doc_002_2019.jpg": "/MyProfile/static/media/Doc_002_2019.b43eeac60c4b6db20365.jpg",
     "static/media/Sun.png": "/MyProfile/static/media/Sun.9d41502b15ddce0e3370.png",
@@ -31,10 +31,10 @@
     "static/media/TicTacToe.jpg": "/MyProfile/static/media/TicTacToe.7d4cb3c3ec77787730df.jpg",
     "index.html": "/MyProfile/index.html",
     "main.1aae7f40.css.map": "/MyProfile/static/css/main.1aae7f40.css.map",
-    "main.a57834d0.js.map": "/MyProfile/static/js/main.a57834d0.js.map"
+    "main.189f990c.js.map": "/MyProfile/static/js/main.189f990c.js.map"
   },
   "entrypoints": [
     "static/css/main.1aae7f40.css",
-    "static/js/main.a57834d0.js"
+    "static/js/main.189f990c.js"
   ]
 }
