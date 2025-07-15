@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MyProfile/static/css/main.054af2a1.css",
-    "main.js": "/MyProfile/static/js/main.78c22809.js",
+    "main.js": "/MyProfile/static/js/main.70e16d05.js",
     "static/media/Doc_Oracle1.jpg": "/MyProfile/static/media/Doc_Oracle1.b704b64344031f33f478.jpg",
     "static/media/mainMe.png": "/MyProfile/static/media/mainMe.70bad0e9bb7b5aee336d.png",
     "static/media/mainError.png": "/MyProfile/static/media/mainError.c4c3705b9938c144cc50.png",
@@ -11,6 +11,7 @@
     "static/media/Doc_009_2024.jpg": "/MyProfile/static/media/Doc_009_2024.f3ae88f5cd20dab80dce.jpg",
     "static/media/DocInico.jpg": "/MyProfile/static/media/DocInico.87dcb0dd048b7de2e180.jpg",
     "static/media/ad.webp": "/MyProfile/static/media/ad.a3cba95c653c4b1c8c5e.webp",
+    "static/media/CV_OlgaHolovash_Front.pdf": "/MyProfile/static/media/CV_OlgaHolovash_Front.885e292e5c2ae23d8886.pdf",
     "static/media/DocHai.jpg": "/MyProfile/static/media/DocHai.2bcb08b315ac4adb568d.jpg",
     "static/media/Doc_007_2021.jpg": "/MyProfile/static/media/Doc_007_2021.8bb3fc8082e0c9b0903d.jpg",
     "static/media/Doc_006_2021.jpg": "/MyProfile/static/media/Doc_006_2021.50195d58178379cb843b.jpg",
@@ -22,7 +23,6 @@
     "static/media/Doc_003_2020.jpg": "/MyProfile/static/media/Doc_003_2020.1f78433159b351d848e1.jpg",
     "static/media/Doc_005_2021.jpg": "/MyProfile/static/media/Doc_005_2021.3a99298035efd22c8376.jpg",
     "static/media/Doc_004_2021.jpg": "/MyProfile/static/media/Doc_004_2021.04b2fbad98572bc18079.jpg",
-    "static/media/CV_OlgaHolovash_Front.pdf": "/MyProfile/static/media/CV_OlgaHolovash_Front.79f5860799a9659c477c.pdf",
     "static/media/Doc_002_2019.jpg": "/MyProfile/static/media/Doc_002_2019.b43eeac60c4b6db20365.jpg",
     "static/media/Sun.png": "/MyProfile/static/media/Sun.9d41502b15ddce0e3370.png",
     "static/media/WarCards.jpg": "/MyProfile/static/media/WarCards.487c02b15e92bb18af7c.jpg",
@@ -31,10 +31,10 @@
     "static/media/TicTacToe.jpg": "/MyProfile/static/media/TicTacToe.7d4cb3c3ec77787730df.jpg",
     "index.html": "/MyProfile/index.html",
     "main.054af2a1.css.map": "/MyProfile/static/css/main.054af2a1.css.map",
-    "main.78c22809.js.map": "/MyProfile/static/js/main.78c22809.js.map"
+    "main.70e16d05.js.map": "/MyProfile/static/js/main.70e16d05.js.map"
   },
   "entrypoints": [
     "static/css/main.054af2a1.css",
-    "static/js/main.78c22809.js"
+    "static/js/main.70e16d05.js"
   ]
 }
