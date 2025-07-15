@@ -1,12 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&text=Pure:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:700&text=css&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 
- .container404 {
-     height: 85vh;
-     background-image: url("src/images/mainError.png");
-     background-size: cover;
-     background-position: center;
-     box-shadow: #0077ea 10px 10px;
- }
+.container404 {
+    height: 90vh;
+    padding-top: 5vh;
+    margin-left: 5vw;
+    width: 90vw;
+    background-image: url("../images/mainError.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow: #0077ea 10px 10px;
+}
+/*<link href="https://fonts.googleapis.com/css2?family=Pacifico&text=Pure:wght@400;700&display=swap" rel="stylesheet">*/
+/*<link href="https://fonts.googleapis.com/css2?family=Roboto:700&text=css&display=swap" rel="stylesheet">*/
+/*<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&text=!&display=swap" rel="stylesheet">*/
 
+
+
+body {
+    min-height: 450px;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle, #0077ea, #1f4f96, #1b2949, #000);
+}
+* *, *::before, *::after {
+    animation-play-state: running !important;
+}
 .stage {
     height: 300px;
     width: 500px;
@@ -25,7 +45,7 @@
     height: 100%;
     position: absolute;
     transform-style: preserve-3d;
-    animation: ಠ_ಠ 5s infinite alternate ease-in-out -7.5s;
+    animation: fadeIn 5s infinite alternate ease-in-out -7.5s;
     animation-fill-mode: forwards;
     transform: rotateY(40deg) rotateX(33deg) translateZ(0);
 }
@@ -147,11 +167,7 @@
     text-shadow: none;
 }
 
- * *, *::before, *::after {
-     animation-play-state: running !important;
- }
-
-@keyframes ಠ_ಠ {
+@keyframes fadeIn {
     100% {
         transform: rotateY(-40deg) rotateX(-43deg);
     }
