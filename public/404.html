@@ -202,7 +202,10 @@
         <div class="layer"></div>
         <div class="layer"></div>
     </div>
-    <script>window.setTimeout = null;</script>
+    <script>
+        window.setTimeout = null;
+        sessionStorage.redirect = location.href;
+    </script>
 </div>
 </body>
 </html>
