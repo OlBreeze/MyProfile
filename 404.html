@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <title>My 404</title>
+    <meta charset="UTF-8">
+    <title>Welcome 404</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&text=Pure:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:700&text=css&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&text=!&display=swap" rel="stylesheet">
+    <script>
+        window.setTimeout = null;
+        sessionStorage.redirect = location.href;
+    </script>
+    <meta http-equiv="refresh" content="3;URL='/'">
     <style>
         .container404 {
             height: 90vh;
@@ -202,11 +207,7 @@
         <div class="layer"></div>
         <div class="layer"></div>
     </div>
-    <script>
-        window.setTimeout = null;
-        sessionStorage.redirect = location.href;
-    </script>
-    <meta charset="UTF-8" http-equiv="refresh" content="0;URL='/'">
+    
 </div>
 </body>
 </html>
