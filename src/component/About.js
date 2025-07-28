@@ -26,8 +26,9 @@ const About = () => {
             </div>
 
             <div className={style.secondBlock}>
-                <p>I'm currently learning course Full Stack Java at Tel-Ran. I'm excited about gaining hands-on
-                    experience and deepening my understanding of software development processes.</p>
+                <p>Full Stack Developer specializing in Java, Spring (Boot, Security) and frontend technologies Next.js, React, Redux.
+                    Full-cycle development experience, covering both backend and frontend components.
+                    Experience in working with relational and NoSQL databases.</p>
             </div>
             <div className={style.thirdBlock}>
                 <p className={style.blockFirst}>I'm looking for opportunities to collaborate on interesting projects
