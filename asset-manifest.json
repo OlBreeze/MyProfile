@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MyProfile/static/css/main.054af2a1.css",
-    "main.js": "/MyProfile/static/js/main.4bdb991c.js",
+    "main.js": "/MyProfile/static/js/main.fa89fa79.js",
     "static/media/Doc_Oracle1.jpg": "/MyProfile/static/media/Doc_Oracle1.b704b64344031f33f478.jpg",
     "static/media/mainMe.png": "/MyProfile/static/media/mainMe.70bad0e9bb7b5aee336d.png",
     "static/media/mainError.png": "/MyProfile/static/media/mainError.c4c3705b9938c144cc50.png",
@@ -11,7 +11,7 @@
     "static/media/Doc_009_2024.jpg": "/MyProfile/static/media/Doc_009_2024.f3ae88f5cd20dab80dce.jpg",
     "static/media/DocInico.jpg": "/MyProfile/static/media/DocInico.87dcb0dd048b7de2e180.jpg",
     "static/media/ad.webp": "/MyProfile/static/media/ad.a3cba95c653c4b1c8c5e.webp",
-    "static/media/CV_OlgaHolovash_Front.pdf": "/MyProfile/static/media/CV_OlgaHolovash_Front.885e292e5c2ae23d8886.pdf",
+    "static/media/CV_OLGA_GOLOVASH_FULL_STACK.pdf": "/MyProfile/static/media/CV_OLGA_GOLOVASH_FULL_STACK.0116d65cbd383908073a.pdf",
     "static/media/DocHai.jpg": "/MyProfile/static/media/DocHai.2bcb08b315ac4adb568d.jpg",
     "static/media/Doc_007_2021.jpg": "/MyProfile/static/media/Doc_007_2021.8bb3fc8082e0c9b0903d.jpg",
     "static/media/Doc_006_2021.jpg": "/MyProfile/static/media/Doc_006_2021.50195d58178379cb843b.jpg",
@@ -31,10 +31,10 @@
     "static/media/TicTacToe.jpg": "/MyProfile/static/media/TicTacToe.7d4cb3c3ec77787730df.jpg",
     "index.html": "/MyProfile/index.html",
     "main.054af2a1.css.map": "/MyProfile/static/css/main.054af2a1.css.map",
-    "main.4bdb991c.js.map": "/MyProfile/static/js/main.4bdb991c.js.map"
+    "main.fa89fa79.js.map": "/MyProfile/static/js/main.fa89fa79.js.map"
   },
   "entrypoints": [
     "static/css/main.054af2a1.css",
-    "static/js/main.4bdb991c.js"
+    "static/js/main.fa89fa79.js"
   ]
 }
