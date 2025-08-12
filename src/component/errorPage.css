@@ -4,13 +4,13 @@
 
 .container404 {
     height: 90vh;
-    padding-top: 5vh;
-    margin-left: 5vw;
-    width: 90vw;
+    /*padding-top: 5vh;*/
+    /*margin-left: 5vw;*/
+    /*width: 90vw;*/
     background-image: url("../images/mainError.png");
     background-size: cover;
     background-position: center;
-    box-shadow: #0077ea 10px 10px;
+    box-shadow: #0077ea 5px 5px;
 }
 /*<link href="https://fonts.googleapis.com/css2?family=Pacifico&text=Pure:wght@400;700&display=swap" rel="stylesheet">*/
 /*<link href="https://fonts.googleapis.com/css2?family=Roboto:700&text=css&display=swap" rel="stylesheet">*/
