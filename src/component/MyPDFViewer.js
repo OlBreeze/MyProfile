@@ -8,7 +8,7 @@ import pdfFile from '../pdf_files/CV_OLGA_GOLOVASH_FULL_STACK.pdf';
 import { defaultLayoutPlugin }  from '@react-pdf-viewer/default-layout';
 
 const MyPDFViewer = (props) => {
-    // const pdfFile = './CV_OLGA_GOLOVASH_FULL_STACK.pdf'; // if doc is in the public
+    // const pdfFile = './CV_OLGA_GOLOVASH_FULL_STACK.pdf';
     const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
     return (
