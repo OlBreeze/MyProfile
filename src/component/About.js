@@ -31,9 +31,7 @@ const About = () => {
                     Experience in working with relational and NoSQL databases.</p>
             </div>
             <div className={style.thirdBlock}>
-                <p className={style.blockFirst}>I'm looking for opportunities to collaborate on interesting projects
-                    that allow me to develop my skills
-                    and apply my knowledge in practice.</p>
+                <p className={style.blockFirst}>I’m passionate about creating and growing — both in tech and in life. My proudest creation? My family 💖 </p>
                 <p className={style.blockMiddle}>I'm also interested in internships where I can gain valuable experience
                     and contribute to a team.</p>
                 <p className={style.blockLast}>If you have any ideas or suggestions, I’d be happy to discuss!</p>
