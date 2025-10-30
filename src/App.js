@@ -2,6 +2,7 @@ import './App.css';
 import Footer from "./component/Footer";
 import Main from "./component/Main";
 import React from "react";
+import ChatBot from "./component/ChatBot";
 
 function App() {
 
@@ -10,6 +11,8 @@ function App() {
                 <Main/>
                 <Footer/>
                 {/*<Contacts/>*/}
+            {/* Чат-бот теперь всплывающий виджет */}
+            <ChatBot/>
         </div>
     );
 }
