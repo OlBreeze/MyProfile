@@ -284,7 +284,7 @@ export default function ChatBot() {
                                     onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.3)'}
                                     onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)'}
                                 >
-                                    Очистить
+                                    Clear
                                 </button>
                                 <button
                                     onClick={() => setIsOpen(false)}
