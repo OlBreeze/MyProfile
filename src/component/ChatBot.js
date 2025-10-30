@@ -2,9 +2,19 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, AlertCircle, X, MessageCircle } from 'lucide-react';
 
 export default function ChatBot() {
+
+    // 💬 Варианты:
+    // Hi! I'm an AI assistant. How can I help you?
+    // I'm the free version — not super fast, but worth the wait 😉
+    // I’m running on the free plan, so please be patient — quality takes time 😅
+    // Free version mode activated! 🐢 Please be gentle, I’m doing my best.
+    // I’m on the free tier, so I move at “coffee break” speed ☕ — thanks for your patience!
+    // I'm not slow... I'm just thinking really, really carefully 😌
+    // Free version here! Processing your request at a comfortable, scenic pace 🐌
     const [isOpen, setIsOpen] = useState(false);
+    const sayHello = 'Free version mode activated! 🐢 Please be gentle, I’m doing my best 😉 How can I help you?';
     const [messages, setMessages] = useState([
-        { id: 1, text: 'Hi! I\'m an AI assistant. How can I help you?', sender: 'bot', timestamp: new Date() }
+        { id: 1, text: sayHello, sender: 'bot', timestamp: new Date() }
     ]);
     const [input, setInput] = useState('');
     const [isTyping, setIsTyping] = useState(false);
@@ -144,7 +154,7 @@ export default function ChatBot() {
 
     const clearChat = () => {
         setMessages([
-            { id: 1, text: 'Hi! I\'m an AI assistant. How can I help you?', sender: 'bot', timestamp: new Date() }
+            { id: 1, text: sayHello, sender: 'bot', timestamp: new Date() }
         ]);
         setError('');
     };
