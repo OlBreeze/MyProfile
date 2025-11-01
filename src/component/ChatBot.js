@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Send, Bot, User, AlertCircle, X, MessageCircle } from 'lucide-react';
+import React, {useState, useRef, useEffect} from 'react';
+import {Send, Bot, User, AlertCircle, X, MessageCircle} from 'lucide-react';
+import {userProfile} from "../utils/constants";
 
 export default function ChatBot() {
 
@@ -11,10 +12,11 @@ export default function ChatBot() {
     // I’m on the free tier, so I move at “coffee break” speed ☕ — thanks for your patience!
     // I'm not slow... I'm just thinking really, really carefully 😌
     // Free version here! Processing your request at a comfortable, scenic pace 🐌
+
     const [isOpen, setIsOpen] = useState(false);
     const sayHello = 'Free version mode activated! 🐢 Please be gentle, I’m doing my best 😉 How can I help you?';
     const [messages, setMessages] = useState([
-        { id: 1, text: sayHello, sender: 'bot', timestamp: new Date() }
+        {id: 1, text: sayHello, sender: 'bot', timestamp: new Date()}
     ]);
     const [input, setInput] = useState('');
     const [isTyping, setIsTyping] = useState(false);
@@ -22,14 +24,14 @@ export default function ChatBot() {
     // const [backendUrl] = useState('http://localhost:3001');
     const [backendUrl] = useState(
         // process.env.REACT_APP_BACKEND_URL
-        'https://chatbot-backend-1707.onrender.com'
-        || 'http://localhost:3001'
+        'https://chatbot-backend-1707.onrender.com'||
+         'http://localhost:3001'
     );
     const [unreadCount, setUnreadCount] = useState(0);
     const messagesEndRef = useRef(null);
 
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+        messagesEndRef.current?.scrollIntoView({behavior: 'smooth'});
     };
 
     useEffect(() => {
@@ -67,16 +69,38 @@ export default function ChatBot() {
     const callBackendAPI = async (userMessage) => {
         try {
             // Формируем историю в формате, который ожидает бэкенд с Gemini
-            const chatHistory = messages.map(msg => ({
-                sender: msg.sender,
-                text: msg.text
-            }));
+            const chatHistory = [];
+
+            // 🔍 Добавляем системный контекст только для первого запроса пользователя
+            // (когда в messages только приветственное сообщение бота)
+            if (messages.length === 1) {
+                console.log('✅ Adding system prompt - first user message');
+                chatHistory.push({
+                    sender: 'system',
+                    text: userProfile
+                });
+            } else {
+                console.log('ℹ️ Skipping system prompt - not first message');
+            }
+
+            // Добавляем историю сообщений
+            messages.forEach(msg => {
+                // Пропускаем приветственное сообщение из истории для бэкенда
+                if (msg.id !== 1) {
+                    chatHistory.push({
+                        sender: msg.sender,
+                        text: msg.text
+                    });
+                }
+            });
 
             // Добавляем текущее сообщение пользователя
             chatHistory.push({
                 sender: 'user',
                 text: userMessage
             });
+
+            console.log('📤 Sending to backend:', chatHistory.length, 'messages');
 
             const response = await fetch(`${backendUrl}/api/chat`, {
                 method: 'POST',
@@ -154,14 +178,16 @@ export default function ChatBot() {
 
     const clearChat = () => {
         setMessages([
-            { id: 1, text: sayHello, sender: 'bot', timestamp: new Date() }
+            {id: 1, text: sayHello, sender: 'bot', timestamp: new Date()}
         ]);
         setError('');
     };
 
     return (
-        <div style={{ position: 'fixed', bottom: '24px', right: '24px', zIndex: 9999,
-            fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif"}}>
+        <div style={{
+            position: 'fixed', bottom: '24px', right: '24px', zIndex: 9999,
+            fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif"
+        }}>
             {/* Кнопка открытия чата */}
             {!isOpen && (
                 <button
@@ -190,7 +216,7 @@ export default function ChatBot() {
                         e.currentTarget.style.boxShadow = '0 8px 24px rgba(102, 126, 234, 0.4)';
                     }}
                 >
-                    <MessageCircle size={30} />
+                    <MessageCircle size={30}/>
                     {unreadCount > 0 && (
                         <span style={{
                             position: 'absolute',
@@ -247,8 +273,8 @@ export default function ChatBot() {
                         padding: '20px',
                         color: 'white'
                     }}>
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+                            <div style={{display: 'flex', alignItems: 'center', gap: '12px'}}>
                                 <div style={{
                                     width: '44px',
                                     height: '44px',
@@ -259,16 +285,16 @@ export default function ChatBot() {
                                     alignItems: 'center',
                                     justifyContent: 'center'
                                 }}>
-                                    <Bot size={24} />
+                                    <Bot size={24}/>
                                 </div>
                                 <div>
-                                    <div style={{ fontWeight: '600', fontSize: '16px' }}>AI Assistant</div>
-                                    <div style={{ fontSize: '12px', opacity: 0.9 }}>
+                                    <div style={{fontWeight: '600', fontSize: '16px'}}>Hi! I'm Olga’s AI Assistant — a passionate Full Stack Developer. Ask me anything about her experience!👩‍💻</div>
+                                    <div style={{fontSize: '12px', opacity: 0.9}}>
                                         {error ? '🔴 Offline' : '🟢 Online'}
                                     </div>
                                 </div>
                             </div>
-                            <div style={{ display: 'flex', gap: '8px' }}>
+                            <div style={{display: 'flex', gap: '8px'}}>
                                 <button
                                     onClick={clearChat}
                                     style={{
@@ -303,7 +329,7 @@ export default function ChatBot() {
                                     onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.3)'}
                                     onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)'}
                                 >
-                                    <X size={18} />
+                                    <X size={18}/>
                                 </button>
                             </div>
                         </div>
@@ -319,8 +345,8 @@ export default function ChatBot() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <AlertCircle size={16} style={{ color: '#dc2626', flexShrink: 0 }} />
-                            <span style={{ color: '#991b1b', fontSize: '13px' }}>{error}</span>
+                            <AlertCircle size={16} style={{color: '#dc2626', flexShrink: 0}}/>
+                            <span style={{color: '#991b1b', fontSize: '13px'}}>{error}</span>
                         </div>
                     )}
 
@@ -368,11 +394,11 @@ export default function ChatBot() {
                                         flexShrink: 0
                                     }}>
                                         {message.sender === 'user' ? (
-                                            <User size={16} color="white" />
+                                            <User size={16} color="white"/>
                                         ) : message.isError ? (
-                                            <AlertCircle size={16} color="white" />
+                                            <AlertCircle size={16} color="white"/>
                                         ) : (
-                                            <Bot size={16} color="#64748b" />
+                                            <Bot size={16} color="#64748b"/>
                                         )}
                                     </div>
                                     <div>
@@ -399,7 +425,10 @@ export default function ChatBot() {
                                             paddingLeft: message.sender === 'user' ? '0' : '4px',
                                             textAlign: message.sender === 'user' ? 'right' : 'left'
                                         }}>
-                                            {message.timestamp.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })}
+                                            {message.timestamp.toLocaleTimeString('ru-RU', {
+                                                hour: '2-digit',
+                                                minute: '2-digit'
+                                            })}
                                         </div>
                                     </div>
                                 </div>
@@ -407,7 +436,7 @@ export default function ChatBot() {
                         ))}
 
                         {isTyping && (
-                            <div style={{ display: 'flex', gap: '10px' }}>
+                            <div style={{display: 'flex', gap: '10px'}}>
                                 <div style={{
                                     width: '32px',
                                     height: '32px',
@@ -418,7 +447,7 @@ export default function ChatBot() {
                                     justifyContent: 'center',
                                     flexShrink: 0
                                 }}>
-                                    <Bot size={16} color="#64748b" />
+                                    <Bot size={16} color="#64748b"/>
                                 </div>
                                 <div style={{
                                     padding: '12px 16px',
@@ -449,7 +478,7 @@ export default function ChatBot() {
                                 </div>
                             </div>
                         )}
-                        <div ref={messagesEndRef} />
+                        <div ref={messagesEndRef}/>
                     </div>
 
                     {/* Input */}
@@ -458,7 +487,7 @@ export default function ChatBot() {
                         background: 'white',
                         borderTop: '1px solid #e2e8f0'
                     }}>
-                        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                        <div style={{display: 'flex', gap: '8px', alignItems: 'center'}}>
                             <input
                                 type="text"
                                 value={input}
@@ -507,7 +536,7 @@ export default function ChatBot() {
                                     e.currentTarget.style.transform = 'scale(1)';
                                 }}
                             >
-                                <Send size={18} />
+                                <Send size={18}/>
                             </button>
                         </div>
                     </div>
