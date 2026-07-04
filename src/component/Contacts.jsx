@@ -96,7 +96,7 @@ function Contacts() {
                 {RECAPTCHA_SITE_KEY && (
                     <div className="g-recaptcha"
                          data-sitekey={RECAPTCHA_SITE_KEY}
-                         style={{marginTop: '10px'}}></div>
+                         style={{margin: '10px 0 16px'}}></div>
                 )}
 
                 <div className={style.footer}>
