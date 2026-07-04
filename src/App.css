@@ -22,7 +22,7 @@ body
 
 .main_page{
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
 }
 header
@@ -60,7 +60,7 @@ nav  ul{
   top: 25px;
 }
 
-nav ul li, footer .button{
+nav ul li a, footer .button{
   display: inline;
   border: 2px solid black;
   border-radius: 5px;

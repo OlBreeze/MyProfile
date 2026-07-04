@@ -3,39 +3,30 @@
   "homepage": "https://olbreeze.github.io/MyProfile/",
   "version": "0.1.0",
   "private": false,
+  "type": "module",
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",
     "@react-pdf-viewer/core": "^3.12.0",
     "@react-pdf-viewer/default-layout": "^3.12.0",
     "@react-pdf-viewer/get-file": "^3.12.0",
     "@react-pdf/renderer": "^4.0.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
     "emailjs-com": "^3.2.0",
+    "lucide-react": "^0.462.0",
     "pdf-lib": "^1.0.0",
     "pdfjs-dist": "^3.11.174",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-pdf": "^9.1.1",
-    "react-router-dom": "^6.27.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-router-dom": "^6.27.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -50,8 +41,9 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@vitejs/plugin-react": "^4.3.4",
     "gh-pages": "^6.2.0",
-    "typescript": "^4.9.5"
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
   }
 }

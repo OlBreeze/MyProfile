@@ -8,10 +8,8 @@ function App() {
 
     return (
         <div className={"App container"}>
-                <Main/>
-                <Footer/>
-                {/*<Contacts/>*/}
-            {/* Чат-бот теперь всплывающий виджет */}
+            <Main/>
+            <Footer/>
             <ChatBot/>
         </div>
     );

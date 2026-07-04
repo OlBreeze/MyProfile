@@ -24,7 +24,7 @@ function Fancybox(props: PropsWithChildren<Props>) {
             NativeFancybox.unbind(container);
             NativeFancybox.close();
         };
-    });
+    }, [props.delegate, props.options]);
 
     return <div  ref={containerRef}>{props.children}</div>;
 }

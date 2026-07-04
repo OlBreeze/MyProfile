@@ -34,7 +34,7 @@ function Carousel(props: PropsWithChildren<Props>) {
         return () => {
             instance.destroy();
         };
-    });
+    }, [props.options]);
 
     return (
         <div className="f-carousel" ref={containerRef}>

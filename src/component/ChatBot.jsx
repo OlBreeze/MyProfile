@@ -21,12 +21,7 @@ export default function ChatBot() {
     const [input, setInput] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const [error, setError] = useState('');
-    // const [backendUrl] = useState('http://localhost:3001');
-    const [backendUrl] = useState(
-        // process.env.REACT_APP_BACKEND_URL
-        'https://chatbot-backend-1707.onrender.com'||
-         'http://localhost:3001'
-    );
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || 'https://chatbot-backend-1707.onrender.com';
     const [unreadCount, setUnreadCount] = useState(0);
     const messagesEndRef = useRef(null);
 
@@ -56,13 +51,12 @@ export default function ChatBot() {
 
     const checkBackendHealth = async () => {
         try {
-            const response = await fetch(`${backendUrl}/health`);
-            if (response.ok) {
-                console.log('✅ Backend connected');
-            }
+            // Пингуем бэкенд, чтобы разбудить его на бесплатном Render.
+            // Результат игнорируем: /health может отсутствовать или отвечать
+            // без CORS-заголовков — реальная ошибка покажется при отправке сообщения
+            await fetch(`${backendUrl}/health`);
         } catch (err) {
-            setError('⚠️ Backend connection error');
-            console.error('Backend connection error:', err);
+            console.warn('Backend health check failed (ignored):', err);
         }
     };
 
@@ -73,14 +67,13 @@ export default function ChatBot() {
 
             // 🔍 Добавляем системный контекст только для первого запроса пользователя
             // (когда в messages только приветственное сообщение бота)
+            // TODO: перенести системный промпт на бэкенд — клиентский промпт
+            // виден в бандле и может быть подменён пользователем
             if (messages.length === 1) {
-                console.log('✅ Adding system prompt - first user message');
                 chatHistory.push({
                     sender: 'system',
                     text: userProfile
                 });
-            } else {
-                console.log('ℹ️ Skipping system prompt - not first message');
             }
 
             // Добавляем историю сообщений
@@ -100,7 +93,8 @@ export default function ChatBot() {
                 text: userMessage
             });
 
-            console.log('📤 Sending to backend:', chatHistory.length, 'messages');
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 60000);
 
             const response = await fetch(`${backendUrl}/api/chat`, {
                 method: 'POST',
@@ -109,12 +103,13 @@ export default function ChatBot() {
                 },
                 body: JSON.stringify({
                     messages: chatHistory
-                })
-            });
+                }),
+                signal: controller.signal
+            }).finally(() => clearTimeout(timeoutId));
 
             if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.error || 'Server error');
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.error || `Server error (${response.status})`);
             }
 
             const data = await response.json();
@@ -169,7 +164,7 @@ export default function ChatBot() {
         }
     };
 
-    const handleKeyPress = (e) => {
+    const handleKeyDown = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
             handleSend();
@@ -425,7 +420,7 @@ export default function ChatBot() {
                                             paddingLeft: message.sender === 'user' ? '0' : '4px',
                                             textAlign: message.sender === 'user' ? 'right' : 'left'
                                         }}>
-                                            {message.timestamp.toLocaleTimeString('ru-RU', {
+                                            {message.timestamp.toLocaleTimeString([], {
                                                 hour: '2-digit',
                                                 minute: '2-digit'
                                             })}
@@ -492,7 +487,7 @@ export default function ChatBot() {
                                 type="text"
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
-                                onKeyPress={handleKeyPress}
+                                onKeyDown={handleKeyDown}
                                 placeholder="Write a message..."
                                 disabled={isTyping}
                                 style={{
